@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -16,16 +17,21 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button b = (Button) findViewById(R.id.button1);
+        Button b = (Button) findViewById(R.id.button2);
         b.setOnClickListener(new OnClickListener() {
-			
+		EditText rpb = (EditText) findViewById(R.id.editText1);	
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				startActivity(new Intent(MainActivity.this, Second.class));
+				Intent meme = new Intent(MainActivity.this, Second.class);
+				meme.putExtra("theText", rpb.getText().toString());
+				//startActivity(new Intent(MainActivity.this, Second.class));
+				startActivity(meme);
 				
 			}
 		});
+        
+        
     }
 
 
