@@ -4,5 +4,7 @@
     <string name="app_name">Beginners Luck</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="buttonAbby">Abby</string>
+    <string name="buttonSimo">Simo loves</string>
 
 </resources>
